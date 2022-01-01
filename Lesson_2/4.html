@@ -32,50 +32,45 @@
   "use strict";
 
   /**
- * Sum of 2 numbers
- * @param {number} firstNum - first number
- * @param {number} secondNum - second number
- */
+   * Sum of 2 numbers
+   * @param {number} firstNum - first number
+   * @param {number} secondNum - second number
+   */
   function sum(firstNum, secondNum) {
-    return firstNum + secondNum
+    return firstNum + secondNum;
   };
 
   /**
- * Difference of 2 numbers
- * @param {number} firstNum - first number
- * @param {number} secondNum - second number
- */
+   * Difference of 2 numbers
+   * @param {number} firstNum - first number
+   * @param {number} secondNum - second number
+   */
   function sub(firstNum, secondNum) {
-    let result
-
     if (firstNum >= secondNum) {
-      result = firstNum - secondNum
-    } else {
-      result = secondNum - firstNum
-    }
-
-    return result
+      return firstNum - secondNum;
+    } 
+    return secondNum - firstNum;
   };
 
   /**
- * Multiplication of 2 numbers
- * @param {number} firstNum - first number
- * @param {number} secondNum - second number
- */
+   * Multiplication of 2 numbers
+   * @param {number} firstNum - first number
+   * @param {number} secondNum - second number
+   */
   function multiply(firstNum, secondNum) {
-    return firstNum * secondNum
+    return firstNum * secondNum;
   };
 
   /**
- * Division of 2 numbers
- * @param {number} firstNum - first number
- * @param {number} secondNum - second number
- */
+   * Division of 2 numbers
+   * @param {number} firstNum - first number
+   * @param {number} secondNum - second number
+   */
   function division(firstNum, secondNum) {
     if (secondNum != 0) {
-      return firstNum / secondNum
+      return firstNum / secondNum;
     } else {
-      return 'Деление на ноль.'
+      return 'Деление на ноль.';
     }
   };
 

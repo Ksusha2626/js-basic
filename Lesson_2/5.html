@@ -34,62 +34,62 @@ Infinity делать не нужно, однако, в случае если б
   <script>
     "use strict";
 
-    /**
- * Sum of 2 numbers
- */
-    function sum(firstNum, secondNum) {
-      return firstNum + secondNum
-    };
+  /**
+   * Sum of 2 numbers
+   * @param {number} firstNum - first number
+   * @param {number} secondNum - second number
+   */
+   function sum(firstNum, secondNum) {
+    return firstNum + secondNum;
+  };
 
-    /**
+  /**
    * Difference of 2 numbers
+   * @param {number} firstNum - first number
+   * @param {number} secondNum - second number
    */
-    function sub(firstNum, secondNum) {
-      let result
+  function sub(firstNum, secondNum) {
+    if (firstNum >= secondNum) {
+      return firstNum - secondNum;
+    } 
+    return secondNum - firstNum;
+  };
 
-      if (firstNum >= secondNum) {
-        result = firstNum - secondNum
-      } else {
-        result = secondNum - firstNum
-      }
-
-      return result
-    };
-
-    /**
+  /**
    * Multiplication of 2 numbers
+   * @param {number} firstNum - first number
+   * @param {number} secondNum - second number
    */
-    function multiply(firstNum, secondNum) {
-      return firstNum * secondNum
-    };
+  function multiply(firstNum, secondNum) {
+    return firstNum * secondNum;
+  };
 
-    /**
+  /**
    * Division of 2 numbers
+   * @param {number} firstNum - first number
+   * @param {number} secondNum - second number
    */
-    function division(firstNum, secondNum) {
-      if (secondNum != 0) {
-        return firstNum / secondNum
-      } else {
-        return 'Деление на ноль.'
-      }
-    };
+  function division(firstNum, secondNum) {
+    if (secondNum != 0) {
+      return firstNum / secondNum;
+    } else {
+      return 'Деление на ноль.';
+    }
+  };
 
-    /**
+  /**
    * Multiplication of 2 numbers
    * @param {number} arg1 - first number
    * @param {number} arg2 - second number
    * @param {string} operation - a string that contains one character from: "+", "-", "*", "/"
    */
     function mathOperation(arg1, arg2, operation) {
-      if (!(operation) in ["+", "-", "*", "/"]) {
-        return NaN
-      }
-
       switch (operation) {
       case "+": return sum(arg1, arg2);
       case "-": return sub(arg1, arg2);
       case "*": return multiply(arg1, arg2);
       case "/": return division(arg1, arg2);
+      default: return NaN;
       }
 
       // 2 Option: 
