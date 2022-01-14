@@ -28,16 +28,16 @@
     }
 
     ProductES5.prototype.make25Discount = function () {
-      this.price *= 0.75
+      this.price *= 0.75;
     };
 
-    const product_es5_1 = new ProductES5('Milk', 500);
-    const product_es5_2 = new ProductES5('Ice Cream', 123);
+    const firstProductES5 = new ProductES5('Milk', 500);
+    const secondProductES5 = new ProductES5('Ice Cream', 123);
 
-    product_es5_1.make25Discount();
-    console.log(`Product: ${product_es5_1.name}, Price: ${product_es5_1.price}`)
-    product_es5_2.make25Discount();
-    console.log(`Product: ${product_es5_2.name}, Price: ${product_es5_2.price}`)
+    firstProductES5.make25Discount();
+    console.log(`Product: ${firstProductES5.name}, Price: ${firstProductES5.price}`);
+    secondProductES5.make25Discount();
+    console.log(`Product: ${secondProductES5.name}, Price: ${secondProductES5.price}`);
 
     // ___________________________________________________
 
@@ -48,22 +48,22 @@
       }
 
       make25Discount() {
-        this.price *= 0.75
+        this.price *= 0.75;
       };
 
       get fullInfo() {
-        return `Product: ${this.name}, Price: ${this.price}`
+        return `Product: ${this.name}, Price: ${this.price}`;
       }
     }
 
-    const product_es6_1 = new ProductES6('Milk', 1500);
-    const product_es6_2 = new ProductES6('Ice Cream', 1123);
+    const firstProductES6 = new ProductES6('Milk', 1500);
+    const secondProductES6 = new ProductES6('Ice Cream', 1123);
 
-    product_es6_1.make25Discount();
-    product_es6_2.make25Discount();
+    firstProductES6.make25Discount();
+    secondProductES6.make25Discount();
 
-    console.log(product_es6_1.fullInfo)
-    console.log(product_es6_2.fullInfo)
+    console.log(firstProductES6.fullInfo);
+    console.log(secondProductES6.fullInfo);
   </script>
 </body>
 

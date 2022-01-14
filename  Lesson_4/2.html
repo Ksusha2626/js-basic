@@ -53,12 +53,12 @@
   function PostES5(name, text) {
     this.name = name;
     this.text = text;
-    this.updatedAt = new Date().toLocaleString();
+    this.updatedAt = new Date();
   }
 
   PostES5.prototype.edit = function (text) {
     this.text = text;
-    this.updatedAt = new Date().toLocaleString();
+    this.updatedAt = new Date();
   };
 
   function AttachedPostES5(name, text) {
@@ -71,7 +71,7 @@
 
   AttachedPostES5.prototype.makeTextHighlighted = function() {
     this.highlighted = true;
-    this.updatedAt = new Date().toLocaleString();
+    this.updatedAt = new Date();
   };
   
 
@@ -96,24 +96,21 @@
     constructor(name, text) {
       this.name = name;
       this.text = text;
-      this.updatedAt = new Date().toLocaleString();
+      this.updatedAt = new Date();
     }
 
     edit(text) {
       this.text = text;
-      this.updatedAt = new Date().toLocaleString();
+      this.updatedAt = new Date();
     };
   }
 
   class AttachedPostES6 extends PostES6 {
-    constructor(name, text) {
-      super(name, text);
-      this.highlighted = false;
-    }
+    highlighted = false;
 
     makeTextHighlighted() {
       this.highlighted = true;
-      this.updatedAt = new Date().toLocaleString();
+      this.updatedAt = new Date();
     };
   }
 

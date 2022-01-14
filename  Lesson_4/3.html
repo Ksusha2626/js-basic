@@ -37,11 +37,11 @@
    * @returns {object} Объект с разрядами числа или пустой объект
    */
   function getDigitsOfNumber(num) {
-    if (Number.isInteger(num) && (num > 0 && num < 999)) {
+    if (Number.isInteger(num) && num > 0 && num < 999) {
       return {
-      units: num % 10,
-      dozens: Math.floor(num / 10) % 10,
-      hundreds: Math.floor(num / 100),
+        units: num % 10,
+        dozens: Math.floor(num / 10) % 10,
+        hundreds: Math.floor(num / 100),
       };
     }
     console.error('Введите, пожалуйста, целое положительное число в диапазоне от 0 до 999.');
