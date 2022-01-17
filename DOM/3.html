@@ -76,19 +76,13 @@
   Необходимо использовать делегирование.
   */
 
+  // const handler = () => {
+  //   const classCheck = event.target.classList.contains('super_element') ? 'присутствует' : 'отсутствует';
+  //   console.log(`Класс "super_element" ${classCheck} в элементе "${event.target.tagName.toLowerCase()}".`);
+  // };
 
-  // ВОПРОС: Можно тут как-то вынести функцию (например handler) отдельно и передать в нее event?
-  /*
- Чтобы получилось примерно вот так:
+  // document.addEventListener('click', handler); 
 
-  const handler = (event) => {
-    const classCheck = event.target.classList.contains('super_element') ? 'присутствует' : 'отсутствует';
-    console.log(`Класс "super_element" ${classCheck} в элементе "${event.target.tagName.toLowerCase()}".`);
-  };
-
-  document.addEventListener('click', handler(event)); -- но я знаю что тут нельзя передать вызов функции, а только ее название, 
-  но как тогда передать параметры, если я хочу ее вынести?
-  */
   document.addEventListener('click', event => {
     const classCheck = event.target.classList.contains('super_element') ? 'присутствует' : 'отсутствует';
     console.log(`Класс "super_element" ${classCheck} в элементе "${event.target.tagName.toLowerCase()}".`);
@@ -129,9 +123,7 @@
   2) Потом сама фаза target (он же "нажатие по кнопке в задании")
   3) Потом выныривает снизу вверх до windows
   
-  Так как ul ниже чем document, то 3 срабатывает быстрее, НО 
-  [ВОПРОС: ] почему событие не происходит при заныривании, а только на выныривании? Я что-то не понимаю. 
-  Ведь сначала мы ныряем и встречаем событие document и только потом ul...
+  Так как ul ниже чем document, то 3 срабатывает быстрее
   */
 
   /*

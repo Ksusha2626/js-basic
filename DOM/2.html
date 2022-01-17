@@ -103,11 +103,10 @@
 
   const attrEls = document.querySelector('.btn.dropdown-toggle').attributes;
 
-  attrEls.forEach(el => console.log(`Атрибут "${el.name}" содержит значение "${el.value}"`)); // Почему не работает этот цикл? Не могу понять что не так 
-
   for (const attr of attrEls) {
     console.log(`Атрибут "${attr.name}" содержит значение "${attr.value}"`);
   }
+
 </script>
 </body>
 </html>
