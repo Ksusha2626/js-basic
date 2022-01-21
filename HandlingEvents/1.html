@@ -59,7 +59,8 @@
   "Добавлено" и кнопка должна стать неактивной.
    */
 
-  // не работает с 3 заданием вероятно потому, что buttons уже набрал список элементов и уже на ним работает, а дальше мы его изменяем, но переменную buttons не пересчитываем 
+  // не работает с 3 заданием вероятно потому, что buttons уже набрал список элементов и уже над ним работает, 
+  // а дальше мы его изменяем, но переменную buttons не пересчитываем 
   const buttons = document.querySelectorAll("button") 
   buttons.forEach(el => el.addEventListener("click", event => {
     event.target.textContent = 'Добавлено';
@@ -89,7 +90,6 @@
    */
 
   const productCopy = document.querySelector('.product').cloneNode(true);
-  console.log(productCopy)
   productCopy
     .querySelector('img')
     .src = 'https://picsum.photos/id/1080/200/300';
